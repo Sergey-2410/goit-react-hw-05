@@ -1,3 +1,4 @@
+import s from './Navigation.module.css';
 const Navigation = () => {
   return <div></div>;
 };

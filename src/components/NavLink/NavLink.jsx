@@ -1,3 +1,4 @@
+import s from './NavLink.module.css';
 const NavLink = () => {
   return <div></div>;
 };
