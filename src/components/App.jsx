@@ -1,13 +1,11 @@
+// import { Route, Routes } from 'react-router-dom';
 import '../index.css';
-import MovieCast from './MovieCast/MovieCast';
-import MovieDetailsPage from './MovieDetailsPage/MovieDetailsPage';
-import MovieReviews from './MovieReviews/MovieReviews';
+import Navigation from './Navigation/Navigation';
+
 const App = () => {
   return (
     <div>
-      <MovieCast />
-      <MovieDetailsPage />
-      <MovieReviews />
+      <Navigation />
     </div>
   );
 };
