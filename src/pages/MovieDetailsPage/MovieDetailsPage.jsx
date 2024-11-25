@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import s from './MovieDetailsPage.module.css';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
 import { fetchDataById } from '../../services/API';
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -32,7 +32,9 @@ const MovieDetailsPage = () => {
         <Link to="cast">Cast</Link>
         <Link to="reviews">Reviews</Link>
       </nav>
-      <Outlet />
+      <Suspense fallback={<h2>Loading details</h2>}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

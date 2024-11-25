@@ -17,6 +17,7 @@ const HomePage = () => {
     };
     getData();
   }, []);
+
   return (
     <div>
       <h1>Tranding today</h1>

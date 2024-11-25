@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import s from './MovieReviews.module.css';
 import { useParams } from 'react-router-dom';
 import { fetchReviewsByMovieId } from '../../services/API';
 const MovieReviews = () => {
