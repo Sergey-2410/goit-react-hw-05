@@ -2,12 +2,13 @@ import { Field, Formik, Form } from 'formik';
 import { useEffect, useState } from 'react';
 import { fetchMovieByQuery } from '../../services/API';
 import MovieList from '../../components/MovieList/MovieList';
-import { useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('query') || '';
+  const location = useLocation();
 
   const handleSubmit = values => {
     setSearchParams({ query: values.query });
@@ -33,7 +34,7 @@ const MoviesPage = () => {
           <button type="submit">search</button>
         </Form>
       </Formik>
-      <MovieList movies={movies} />
+      <MovieList movies={movies} location={location} />
     </div>
   );
 };
