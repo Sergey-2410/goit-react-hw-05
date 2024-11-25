@@ -30,3 +30,10 @@ export const fetchReviewsByMovieId = async id => {
 
   return data.results;
 };
+export const fetchMovieByQuery = async query => {
+  const { data } = await axios.get(`${BASE_URL}/search/movie`, {
+    params: { query },
+    headers: { Authorization: `Bearer ${TOKEN}` },
+  });
+  return data.results;
+};
