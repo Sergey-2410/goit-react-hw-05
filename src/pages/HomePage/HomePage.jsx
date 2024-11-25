@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import s from './HomePage.module.css';
+import MovieList from '../../components/MovieList/MovieList';
 import { fetchData } from '../../services/API';
-import { Link } from 'react-router-dom';
+import s from './HomePage.module.css';
+
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
   useEffect(() => {
@@ -17,14 +18,8 @@ const HomePage = () => {
   }, []);
   return (
     <div>
-      Tranding today
-      <ul>
-        {movies.map(movie => (
-          <li key={movie.id}>
-            <Link to={`/movies/${movie.id.toString()}`}>{movie.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <h1>Tranding today</h1>
+      <MovieList movies={movies} />
     </div>
   );
 };
