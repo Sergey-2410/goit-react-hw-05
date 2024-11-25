@@ -1,12 +1,13 @@
+import { NavLink } from 'react-router-dom';
 import s from './NavLink.module.css';
 import clsx from 'clsx';
-const NavLink = () => {
+const CustomNavLink = () => {
   const buildLinkClass = ({ isActive }) => {
     return clsx(s.link, isActive && s.active);
   };
   return (
     <div>
-      <nav>
+      <nav className={s.navigation}>
         <NavLink to="/" className={buildLinkClass}>
           Home
         </NavLink>
@@ -18,4 +19,4 @@ const NavLink = () => {
   );
 };
 
-export default NavLink;
+export default CustomNavLink;
