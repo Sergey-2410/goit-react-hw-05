@@ -9,18 +9,24 @@ const MovieCast = () => {
     const getData = async () => {
       try {
         const data = await fetchCastByMovieId(movieId);
-        setCast(data);
+        const roles = data.filter(cast => cast.order < 10);
+        setCast(roles);
       } catch (error) {
-        console.log(error);
+        console.error('Error in MovieCast:', error.message);
       }
     };
     getData();
   }, [movieId]);
+
   return (
     <div>
       <ul>
         {casts.map(cast => (
-          <li key={cast.id}>{cast.genre_ids}</li>
+          <li key={cast.id}>
+            <img src={`https://image.tmdb.org/t/p/w200${cast.profile_path}`} />
+            <p>{cast.name}</p>
+            <p>Character: {cast.character}</p>
+          </li>
         ))}
       </ul>
     </div>

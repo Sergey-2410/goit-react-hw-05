@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, Outlet, useParams } from 'react-router-dom';
 import s from './MovieDetailsPage.module.css';
 import { useState, useEffect } from 'react';
 import { fetchDataById } from '../../services/API';
@@ -30,6 +30,7 @@ const MovieDetailsPage = () => {
         <Link to="cast">Cast</Link>
         <Link to="reviews">Reviews</Link>
       </nav>
+      <Outlet />
     </div>
   );
 };
