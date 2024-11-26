@@ -7,8 +7,14 @@
 .img {
   max-width: 300px;
 }
-.boxDescription {
+.boxAboutMovie {
   display: flex;
+  gap: 10px;
   border-bottom: 1px solid black;
   padding-bottom: 5px;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

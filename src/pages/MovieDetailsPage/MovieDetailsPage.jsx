@@ -25,17 +25,21 @@ const MovieDetailsPage = () => {
   return (
     <div>
       <Link to={goBackLink.current}>Go back</Link>
-      <div className={s.boxDescription}>
+      <div className={s.boxAboutMovie}>
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           className={s.img}
         />
-        <div>
+        <div className={s.description}>
           <h2>{movie.title}</h2>
-          <h2>Overview</h2>
-          <p>{movie.overview}</p>
-          <h2>Status</h2>
-          <p>{movie.status}</p>
+          <div>
+            <h2>Overview</h2>
+            <p>{movie.overview}</p>
+          </div>
+          <div>
+            <h2>Status</h2>
+            <p>{movie.status}</p>
+          </div>
         </div>
       </div>
       <nav className={s.nav}>
