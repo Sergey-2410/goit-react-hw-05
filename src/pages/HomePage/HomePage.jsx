@@ -12,7 +12,7 @@ const HomePage = () => {
         const { results } = await fetchData();
         setMovies(results);
       } catch (error) {
-        console.log(error);
+        console.error('Error in HomePage:', error.message);
       }
     };
     getData();

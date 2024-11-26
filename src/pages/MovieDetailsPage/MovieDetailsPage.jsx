@@ -13,7 +13,7 @@ const MovieDetailsPage = () => {
         const data = await fetchDataById(movieId);
         setMovie(data);
       } catch (error) {
-        console.log(error);
+        console.error('Error in MovieDetailsPage:', error.message);
       }
     };
     getData();
