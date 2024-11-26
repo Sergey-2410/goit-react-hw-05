@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { fetchMovieByQuery } from '../../services/API';
 import MovieList from '../../components/MovieList/MovieList';
 import { useLocation, useSearchParams } from 'react-router-dom';
+import s from './MoviesPage.module.css';
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
@@ -29,9 +30,11 @@ const MoviesPage = () => {
   return (
     <div>
       <Formik onSubmit={handleSubmit} initialValues={initialValue}>
-        <Form>
-          <Field name="query" placeholder="Search movies" />
-          <button type="submit">search</button>
+        <Form className={s.form}>
+          <Field className={s.input} name="query" placeholder="Search movies" />
+          <button className={s.btnSubmit} type="submit">
+            search
+          </button>
         </Form>
       </Formik>
       <MovieList movies={movies} location={location} />

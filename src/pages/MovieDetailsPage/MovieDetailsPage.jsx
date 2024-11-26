@@ -25,8 +25,19 @@ const MovieDetailsPage = () => {
   return (
     <div>
       <Link to={goBackLink.current}>Go back</Link>
-      <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
-      <p>{movie.overview}</p>
+      <div className={s.boxDescription}>
+        <img
+          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          className={s.img}
+        />
+        <div>
+          <h2>{movie.title}</h2>
+          <h2>Overview</h2>
+          <p>{movie.overview}</p>
+          <h2>Status</h2>
+          <p>{movie.status}</p>
+        </div>
+      </div>
       <nav className={s.nav}>
         Additional information
         <Link to="cast">Cast</Link>

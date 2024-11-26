@@ -1,4 +1,14 @@
 .nav {
   display: flex;
+  flex-direction: column;
   gap: 10px;
+  border-bottom: 1px solid black;
+}
+.img {
+  max-width: 300px;
+}
+.boxDescription {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
 }

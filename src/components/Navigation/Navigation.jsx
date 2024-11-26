@@ -8,10 +8,10 @@ const Navigation = () => {
   return (
     <div className={s.box}>
       <nav className={s.navigation}>
-        <NavLink to="/" className={buildLinkClass}>
+        <NavLink to="/" className={(buildLinkClass, s.nLink)}>
           Home
         </NavLink>
-        <NavLink to="/movies" className={buildLinkClass}>
+        <NavLink to="/movies" className={(buildLinkClass, s.nLink)}>
           Movies
         </NavLink>
       </nav>
