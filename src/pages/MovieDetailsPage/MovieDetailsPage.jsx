@@ -24,7 +24,9 @@ const MovieDetailsPage = () => {
 
   return (
     <div>
-      <Link to={goBackLink.current}>Go back</Link>
+      <Link to={goBackLink.current} className={s.goBack}>
+        Go back
+      </Link>
       <div className={s.boxAboutMovie}>
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

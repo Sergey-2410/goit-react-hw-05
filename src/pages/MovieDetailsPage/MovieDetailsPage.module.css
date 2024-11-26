@@ -18,3 +18,10 @@
   flex-direction: column;
   gap: 20px;
 }
+.goBack {
+  text-decoration: none;
+  color: black;
+}
+.goBack:hover {
+  color: red;
+}
